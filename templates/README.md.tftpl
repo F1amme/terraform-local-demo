@@ -1,0 +1,14 @@
+# ${project_name}
+
+**Project ID:** ${project_id}  
+**Generated at:** ${generated_at}
+
+## Environments
+%{ for env in environments }
+- ${env}
+%{ endfor }
+
+%{ if has_prod }
+## Production Notes
+This project contains production environment configuration.
+%{ endif }
